@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'cpython_deepdiff'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=cpython_deepdiff",
+                    "--package=cpython_deepdiff"
+                ],
+                "filter": {
+                    "name": "cpython_deepdiff",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'cpython_deepdiff'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=cpython_deepdiff",
+                    "--package=cpython_deepdiff"
+                ],
+                "filter": {
+                    "name": "cpython_deepdiff",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
